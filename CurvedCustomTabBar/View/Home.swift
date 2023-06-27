@@ -13,28 +13,32 @@ struct Home: View {
     // For Smooth Shape Sliding Effect, We're going to use Matched Geometry Effect
     @Namespace private var animation
     @State private var tabShapePosition: CGPoint = .zero
+    init() {
+        // Hiding Tab Bar Due To SwiftUI iOS 16 Bug
+        UITabBar.appearance().isHidden = true
+    }
     var body: some View {
         VStack(spacing: 0) {
             TabView(selection: $activeTab) {
                 Text("Home")
                     .tag(Tab.home)
                     // Hiding Native Tab Bar
-                    .toolbar (.hidden, for: .tabBar)
+                    //.toolbar (.hidden, for: .tabBar)
                 
                 Text("Services")
                     .tag(Tab.services)
                     // Hiding Native Tab Bar
-                    .toolbar (.hidden, for: .tabBar)
+                    //.toolbar (.hidden, for: .tabBar)
                 
                 Text("Partners")
                     .tag(Tab.partners)
                     // Hiding Native Tab Bar
-                    .toolbar (.hidden, for: .tabBar)
+                    //.toolbar (.hidden, for: .tabBar)
                 
                 Text("Activity")
                     .tag(Tab.activity)
                     // Hiding Native Tab Bar
-                    .toolbar (.hidden, for: .tabBar)
+                    //.toolbar (.hidden, for: .tabBar)
             }
             
             CustomTabBar()
@@ -120,6 +124,10 @@ struct TabItem: View {
         })
         .onTapGesture {
             activeTab = tab
+            
+            withAnimation (.interactiveSpring (response: 0.6, dampingFraction: 0.7, blendDuration: 0.7)) {
+                position.x = tabPosition.x
+            }
         }
     }
 }
