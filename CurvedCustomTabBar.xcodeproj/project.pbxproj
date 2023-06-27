@@ -13,6 +13,8 @@
 		4A4548162A49B44E0044A97C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A4548152A49B44E0044A97C /* Preview Assets.xcassets */; };
 		4A45481F2A49BA1D0044A97C /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A45481E2A49BA1D0044A97C /* Tab.swift */; };
 		4A4548212A49BB070044A97C /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4548202A49BB070044A97C /* Home.swift */; };
+		4A4548232A4ABB6C0044A97C /* TabShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4548222A4ABB6C0044A97C /* TabShape.swift */; };
+		4A4548252A4ABE3B0044A97C /* TabPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4548242A4ABE3B0044A97C /* TabPosition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		4A4548152A49B44E0044A97C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4A45481E2A49BA1D0044A97C /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
 		4A4548202A49BB070044A97C /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		4A4548222A4ABB6C0044A97C /* TabShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabShape.swift; sourceTree = "<group>"; };
+		4A4548242A4ABE3B0044A97C /* TabPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabPosition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,8 @@
 			isa = PBXGroup;
 			children = (
 				4A4548202A49BB070044A97C /* Home.swift */,
+				4A4548222A4ABB6C0044A97C /* TabShape.swift */,
+				4A4548242A4ABE3B0044A97C /* TabPosition.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -161,8 +167,10 @@
 			files = (
 				4A45481F2A49BA1D0044A97C /* Tab.swift in Sources */,
 				4A4548112A49B44C0044A97C /* ContentView.swift in Sources */,
+				4A4548252A4ABE3B0044A97C /* TabPosition.swift in Sources */,
 				4A4548212A49BB070044A97C /* Home.swift in Sources */,
 				4A45480F2A49B44C0044A97C /* CurvedCustomTabBarApp.swift in Sources */,
+				4A4548232A4ABB6C0044A97C /* TabShape.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

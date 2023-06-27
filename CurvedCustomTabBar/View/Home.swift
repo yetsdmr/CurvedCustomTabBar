@@ -12,6 +12,7 @@ struct Home: View {
     @State private var activeTab: Tab = .home
     // For Smooth Shape Sliding Effect, We're going to use Matched Geometry Effect
     @Namespace private var animation
+    @State private var tabShapePosition: CGPoint = .zero
     var body: some View {
         VStack(spacing: 0) {
             TabView(selection: $activeTab) {
@@ -54,14 +55,15 @@ struct Home: View {
                     inactiveTint: inactiveTint,
                     tab: $0,
                     animation: animation,
-                    activeTab: $activeTab
+                    activeTab: $activeTab,
+                    position: $tabShapePosition
                 )
             }
         }
         .padding(.horizontal, 15)
         .padding(.vertical, 10)
         .background(content: {
-            Rectangle()
+            TabShape(midpoint: tabShapePosition.x)
                 .fill(.white)
                 .ignoresSafeArea()
                 // Adding Blur + Shadow
@@ -82,7 +84,10 @@ struct TabItem: View {
     var tab: Tab
     var animation: Namespace.ID
     @Binding var activeTab: Tab
+    @Binding var position: CGPoint
     
+    // Each Tab Item Position on the Screen
+    @ State private var tabPosition: CGPoint = .zero
     var body: some View {
         VStack(spacing: 5) {
             Image(systemName: tab.systemImage)
@@ -105,6 +110,14 @@ struct TabItem: View {
         }
         .frame(maxWidth: .infinity)
         .contentShape(Rectangle())
+        .viewPosition(completion: { rect in
+            tabPosition.x = rect.midX
+            
+            // Updating Active Tab Position
+            if activeTab == tab {
+                position.x = rect.midX
+            }
+        })
         .onTapGesture {
             activeTab = tab
         }
