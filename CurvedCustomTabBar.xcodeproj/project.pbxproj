@@ -11,6 +11,8 @@
 		4A4548112A49B44C0044A97C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4548102A49B44C0044A97C /* ContentView.swift */; };
 		4A4548132A49B44E0044A97C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A4548122A49B44E0044A97C /* Assets.xcassets */; };
 		4A4548162A49B44E0044A97C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A4548152A49B44E0044A97C /* Preview Assets.xcassets */; };
+		4A45481F2A49BA1D0044A97C /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A45481E2A49BA1D0044A97C /* Tab.swift */; };
+		4A4548212A49BB070044A97C /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4548202A49BB070044A97C /* Home.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		4A4548102A49B44C0044A97C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4A4548122A49B44E0044A97C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A4548152A49B44E0044A97C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4A45481E2A49BA1D0044A97C /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
+		4A4548202A49BB070044A97C /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +55,8 @@
 		4A45480D2A49B44C0044A97C /* CurvedCustomTabBar */ = {
 			isa = PBXGroup;
 			children = (
+				4A45481D2A49BA0C0044A97C /* Model */,
+				4A45481C2A49BA040044A97C /* View */,
 				4A45480E2A49B44C0044A97C /* CurvedCustomTabBarApp.swift */,
 				4A4548102A49B44C0044A97C /* ContentView.swift */,
 				4A4548122A49B44E0044A97C /* Assets.xcassets */,
@@ -65,6 +71,22 @@
 				4A4548152A49B44E0044A97C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4A45481C2A49BA040044A97C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4A4548202A49BB070044A97C /* Home.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4A45481D2A49BA0C0044A97C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4A45481E2A49BA1D0044A97C /* Tab.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +159,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A45481F2A49BA1D0044A97C /* Tab.swift in Sources */,
 				4A4548112A49B44C0044A97C /* ContentView.swift in Sources */,
+				4A4548212A49BB070044A97C /* Home.swift in Sources */,
 				4A45480F2A49B44C0044A97C /* CurvedCustomTabBarApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
